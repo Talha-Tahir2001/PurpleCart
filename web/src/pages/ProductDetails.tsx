@@ -22,7 +22,7 @@ const ProductDetails: FC = () => {
     return productsCopy.slice(0, 5);
   }, [products, product]);
 
-  const thumbnail = product?.images[thumbnailIndex] ?? null;
+  const thumbnail = product?.image[thumbnailIndex] ?? null;
 
   if (!product) {
     return null;
@@ -44,7 +44,7 @@ const ProductDetails: FC = () => {
       <div className="mt-4 flex flex-col gap-20 md:flex-row">
         <div className="flex gap-3">
           <div className="flex flex-col gap-3">
-            {product.images.map((image: string, index: number) => (
+            {product.image.map((image: string, index: number) => (
               <div
                 key={index}
                 onClick={() => setThumbnailIndex(index)}
