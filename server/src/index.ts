@@ -1,5 +1,5 @@
 import cookieParser from "cookie-parser";
-import express, { type Request, type Response } from "express";
+import express, { type Response } from "express";
 import connectDB from "./configs/db.js";
 import { setServers } from "node:dns/promises";
 import cartRouter from "./routes/cartRoute.js";
@@ -35,7 +35,7 @@ app.use((req, res, next) => {
 });
 
 
-app.get('/', (req: Request, res: Response) => res.send('API is working!'));
+app.get('/', (res: Response) => res.send('API is working!'));
 app.use('/api/user', userRouter);
 app.use('/api/seller', sellerRouter);
 app.use('/api/product', productRouter);
