@@ -7,9 +7,9 @@ interface SellerLoginBody {
   password: string;
 }
 
-interface SellerJwtPayload {
-  email: string;
-}
+// interface SellerJwtPayload {
+//   email: string;
+// }
 
 // Seller Login : /api/seller/login
 export const sellerLogin = async (

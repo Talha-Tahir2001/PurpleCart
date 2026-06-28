@@ -125,7 +125,7 @@ export const getUserOrders = async (
 
 // Get all orders : /api/order/seller
 export const getAllOrders = async (
-  req: AuthenticatedRequest,
+  // req: AuthenticatedRequest,
   res: Response
 ): Promise<void> => {
   try {
